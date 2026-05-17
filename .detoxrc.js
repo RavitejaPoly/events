@@ -1,6 +1,10 @@
+const isWindows = process.platform === 'win32';
+const gradlew = isWindows ? 'gradlew.bat' : './gradlew';
+const androidGradleBuild = (assembleTask, testBuildType) =>
+  `cd android && ${gradlew} ${assembleTask} assembleAndroidTest -DtestBuildType=${testBuildType}`;
+
 /** @type {Detox.DetoxConfig} */
-module.exports = {
-  testRunner: {
+module.exports = {  testRunner: {
     args: {
       $0: 'jest',
       config: 'e2e/jest.config.js',
@@ -12,29 +16,27 @@ module.exports = {
   apps: {
     'ios.debug': {
       type: 'ios.app',
-      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/rn_ci_cd.app',
+      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/events.app',
       build:
-        'xcodebuild -workspace ios/rn_ci_cd.xcworkspace -scheme rn_ci_cd -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build',
+        'xcodebuild -workspace ios/events.xcworkspace -scheme events -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build',
     },
     'ios.release': {
       type: 'ios.app',
       binaryPath:
-        'ios/build/Build/Products/Release-iphonesimulator/rn_ci_cd.app',
+        'ios/build/Build/Products/Release-iphonesimulator/events.app',
       build:
-        'xcodebuild -workspace ios/rn_ci_cd.xcworkspace -scheme rn_ci_cd -configuration Release -sdk iphonesimulator -derivedDataPath ios/build',
+        'xcodebuild -workspace ios/events.xcworkspace -scheme events -configuration Release -sdk iphonesimulator -derivedDataPath ios/build',
     },
     'android.debug': {
       type: 'android.apk',
       binaryPath: 'android/app/build/outputs/apk/debug/app-debug.apk',
-      build:
-        'cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug',
+      build: androidGradleBuild('assembleDebug', 'debug'),
       reversePorts: [8081],
     },
     'android.release': {
       type: 'android.apk',
       binaryPath: 'android/app/build/outputs/apk/release/app-release.apk',
-      build:
-        'cd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release',
+      build: androidGradleBuild('assembleRelease', 'release'),
     },
   },
   devices: {
@@ -53,7 +55,7 @@ module.exports = {
     emulator: {
       type: 'android.emulator',
       device: {
-        avdName: 'Pixel_6a_API_34',
+        avdName: '000693437000149',
       },
     },
     'genymotion.emulator.uuid': {

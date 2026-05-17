@@ -1,4 +1,4 @@
-package com.rn_ci_cd
+package com.events
 
 import android.app.Application
 import com.facebook.react.PackageList

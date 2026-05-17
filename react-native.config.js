@@ -2,7 +2,7 @@ module.exports = {
   project: {
     ios: {},
     android: {
-      packageName: 'com.rn_ci_cd',
+      packageName: 'com.events',
     },
   },
   'react-native-vector-icons': {

@@ -1,5 +1,5 @@
 {
-  "name": "rn_ci_cd",
+  "name": "events",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "start": "react-native start",
     "test": "jest",
     "detox:android_build": "detox build --configuration android.emu.debug",
-    "detox:android_test": "detox test --configuration android.emu.debug",
+    "detox:android_test": "detox test --configuration android.att.debug",
     "detox:android:test:ci": "detox test --configuration android.emu.debug --headless --record-logs failing --record-videos failing --take-screenshots failing",
     "detox:ios_build": "detox build --configuration ios.sim.debug",
     "detox:ios_test": "detox test --configuration ios.sim.debug",
