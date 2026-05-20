@@ -1,4 +1,4 @@
-package com.events;
+package com.events_demo;
 
 import com.wix.detox.Detox;
 import com.wix.detox.config.DetoxConfig;

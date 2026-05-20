@@ -16,16 +16,16 @@ module.exports = {  testRunner: {
   apps: {
     'ios.debug': {
       type: 'ios.app',
-      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/events.app',
+      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/events_demo.app',
       build:
-        'xcodebuild -workspace ios/events.xcworkspace -scheme events -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build',
+        'xcodebuild -workspace ios/events_demo.xcworkspace -scheme events_demo -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build',
     },
     'ios.release': {
       type: 'ios.app',
       binaryPath:
-        'ios/build/Build/Products/Release-iphonesimulator/events.app',
+        'ios/build/Build/Products/Release-iphonesimulator/events_demo.app',
       build:
-        'xcodebuild -workspace ios/events.xcworkspace -scheme events -configuration Release -sdk iphonesimulator -derivedDataPath ios/build',
+        'xcodebuild -workspace ios/events_demo.xcworkspace -scheme events_demo -configuration Release -sdk iphonesimulator -derivedDataPath ios/build',
     },
     'android.debug': {
       type: 'android.apk',

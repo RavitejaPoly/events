@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ci_cd.app"
-               BlueprintName = "ci_cd"
-               ReferencedContainer = "container:ci_cd.xcodeproj">
+               BuildableName = "events_demo.app"
+               BlueprintName = "events_demo"
+               ReferencedContainer = "container:events_demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ci_cdTests.xctest"
-               BlueprintName = "ci_cdTests"
-               ReferencedContainer = "container:ci_cd.xcodeproj">
+               BuildableName = "events_demoTests.xctest"
+               BlueprintName = "events_demoTests"
+               ReferencedContainer = "container:events_demo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ci_cd.app"
-            BlueprintName = "ci_cd"
-            ReferencedContainer = "container:ci_cd.xcodeproj">
+            BuildableName = "events_demo.app"
+            BlueprintName = "events_demo"
+            ReferencedContainer = "container:events_demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ci_cd.app"
-            BlueprintName = "ci_cd"
-            ReferencedContainer = "container:ci_cd.xcodeproj">
+            BuildableName = "events_demo.app"
+            BlueprintName = "events_demo"
+            ReferencedContainer = "container:events_demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
